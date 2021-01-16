@@ -106,7 +106,7 @@ function s:init(onStart)
 		let s:cursorbg = synIDattr(hlID("Cursor"),"bg")
 		let s:cursorfg = synIDattr(hlID("Cursor"),"fg")
 		let s:cmdh = &cmdheight
-		hi Cursor guibg=NONE guifg=NONE
+		"hi Cursor guibg=NONE guifg=NONE
 
 		let s:klist = ["j", "k", "u", "d", "w", "l", "s", "c"]
 		for l:key in s:klist
@@ -125,7 +125,7 @@ function s:init(onStart)
 		endfor
 		cunmap <up>
 		cunmap <down>
-		exe "hi Cursor guibg=" . s:cursorbg . " guifg=".((s:cursorfg == "") ? "NONE" : s:cursorfg)
+		"exe "hi Cursor guibg=" . s:cursorbg . " guifg=".((s:cursorfg == "") ? "NONE" : s:cursorfg)
 	endif
 endfunc
 
